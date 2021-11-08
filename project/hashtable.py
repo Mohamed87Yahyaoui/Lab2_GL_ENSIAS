@@ -26,7 +26,7 @@ class hashTable:
         elif len(self.hashTab[i]) > 1:
             for j in range(len(self.hashTab[i])):
                 print("Index : ", i, j, "\n"
-                      "Nom:",self.hashTab[i][j][0], "\n"
+                      "Nom:",self.hashTab[i][j][0], " \n"
                       "Tel:", self.hashTab[i][j][1], "\n")
         else:
             print("Aucun index trouvé")
@@ -51,3 +51,12 @@ class hashTable:
             occurance_index = self.chercher_elem(nom)[2]
             item_delete = self.hashTab[i].pop(occurance_index)
             print("l'element", item_delete, "est successivement supprimé")
+
+    def nombreItems(self, i):
+        if i in range(-self.taille, self.taille):
+            print("l'index contient comme nombre d'item ", i,
+                  " est: ", len(self.hashTab[i]))
+            return len(self.hashTab[i])
+        else:
+            print("index out of range")
+            return 0
