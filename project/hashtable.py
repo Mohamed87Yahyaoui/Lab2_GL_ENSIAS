@@ -27,4 +27,4 @@ class hashTable:
             else:
                 Ind += 1
         if Ind == len(self.hashTable[index]):
-            return "L'item cherché est non trouve"
+            return "element introuvable"
