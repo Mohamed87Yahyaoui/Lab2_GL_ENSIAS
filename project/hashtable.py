@@ -48,4 +48,4 @@ class hashTable:
             i = self.chercherItem(nom)[1]
             occurance_index = self.chercherItem(nom)[2]
             item_delete = self.hashTab[i].pop(occurance_index)
-            print("l'elemt", item_delete, "est successivement supprimé")
+            print("l'element", item_delete, "est successivement supprimé")
