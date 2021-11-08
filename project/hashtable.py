@@ -17,3 +17,14 @@ class hashTable:
                 print("--------------\nIndex : ", index, "\nNom:",
                       self.hashTable[index][0][0], "\nTel:", self.hashTable[index][0][1], "\n--------------")
 
+    def afficherItemParIndex(self, i):
+        if len(self.hashTable[i]) == 1:
+            print("--------------\nIndex : ", i, "\nNom:",
+                  self.hashTable[i][0][0], "\nTel:", self.hashTable[i][0][1], "\n--------------")
+        elif len(self.hashTable[i]) > 1:
+            for j in range(len(self.hashTable[index])):
+                print("--------------\n Index : ", i, j, "\nNom:",
+                      self.hashTable[i][j][0], "\nTel:", self.hashTable[i][j][1], "\n--------------")
+        else:
+            print("no index found")
+
