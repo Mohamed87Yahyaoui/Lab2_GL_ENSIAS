@@ -7,18 +7,18 @@ class hashTable:
     def hashage(self, key):
         return hash(key) % self.taille
 
-    def ajouterItem(self,nom,cin):
+    def ajouterElem(self,nom,cin):
         index=self.hachage(nom)
         self.hashTab[index].append([nom,cin])
 
-    def afficherItem(self):
+    def afficherElem(self):
         for i in range(self.taille):
             if len(self.hashTab[i]) > 0:
                 print("Index : ", i, "\n"
                       "Nom:",self.hashTab[i][0][0],"\n"
                       "CIN:", self.hashTab[i][0][1],"\n")
 
-    def afficherItemParIndex(self, i):
+    def afficherElemParIndex(self, i):
         if len(self.hashTab[i]) == 1:
             print("Index : ", i, "\n"
                   "Nom:",self.hashTab[i][0][0], "\n"
@@ -31,7 +31,7 @@ class hashTable:
         else:
             print("no index found")
 
-    def chercherItem(self, nom):
+    def chercherElem(self, nom):
         index = self.HASH(nom)
         Ind = 0
         for k in range(len(self.hashTab[i])):
@@ -50,4 +50,4 @@ class hashTable:
             i = self.chercherItem(nom)[1]
             occurance_index = self.chercherItem(nom)[2]
             item_delete = self.hashTab[i].pop(occurance_index)
-            print("l'elemt", item_delete, "est successivement supprimé")
+            print("l'element", item_delete, "est successivement supprimé")
