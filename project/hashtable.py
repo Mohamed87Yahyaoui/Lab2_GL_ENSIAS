@@ -7,11 +7,11 @@ class hashTable:
     def hashage(self, key):
         return hash(key) % self.taille
 
-    def ajouterElem(self,nom,cin):
+    def ajouterItem(self,nom,cin):
         index=self.hachage(nom)
         self.hashTab[index].append([nom,cin])
 
-    def afficherElem(self):
+    def afficherItem(self):
         for i in range(self.taille):
             if len(self.hashTab[i]) > 0:
                 print("Index : ", i, "\n"
