@@ -53,7 +53,7 @@ class hashTable:
             print("l'element", item_delete, "est successivement supprimé")
 
 
-    def nombreItems(self, i):
+    def nombre_elems(self, i):
         if i in range(-self.taille, self.taille):
             print("l'index contient comme nombre d'item ", i,
                   " est: ", len(self.hashTab[i]))
