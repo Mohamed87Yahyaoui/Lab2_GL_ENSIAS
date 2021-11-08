@@ -8,8 +8,8 @@ class hashTable:
         return hash(key) % self.taille
 
     def ajout_Elem(self,nom,cin):
-        index=self.hachage(nom)
-        self.hashTab[index].append([nom,cin])
+        i=self.hachage(nom)
+        self.hashTab[i].append([nom,cin])
 
     def afficher_Elem(self):
         for i in range(self.taille):
