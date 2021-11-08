@@ -18,13 +18,14 @@ class hashTable:
                       "Nom:",self.hashTab[i][0][0],"\n "
                       "CIN:", self.hashTab[i][0][1],"\n")
 
-    def chercherElem(self, nom):
-        index = self.HASH(nom)
-        Ind = 0
-        for i in range(len(self.hashTable[index])):
-            if nom == self.hashTable[index][i][0]:
-                return (self.hashTable[index][i], index, i)
-            else:
-                Ind += 1
-        if Ind == len(self.hashTable[index]):
-            return "element introuvable"
+    def afficherItemParIndex(self, i):
+        if len(self.hashTable[i]) == 1:
+            print("--------------\nIndex : ", i, "\nNom:",
+                  self.hashTable[i][0][0], "\nTel:", self.hashTable[i][0][1], "\n--------------")
+        elif len(self.hashTable[i]) > 1:
+            for j in range(len(self.hashTable[index])):
+                print("--------------\n Index : ", i, j, "\nNom:",
+                      self.hashTable[i][j][0], "\nTel:", self.hashTable[i][j][1], "\n--------------")
+        else:
+            print("no index found")
+
