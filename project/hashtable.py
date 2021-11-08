@@ -39,3 +39,13 @@ class hashTable:
                 Ind += 1
         if Ind == len(self.hashTab[index]):
             return "L'item cherché est non trouve"
+        
+        
+    def supprimerItem(self, nom):
+        if self.chercherItem(nom) == "L'élement cherché n'est pas trouvé":
+            print("Element n'est pas existant")
+        else:
+            i = self.chercherItem(nom)[1]
+            occurance_index = self.chercherItem(nom)[2]
+            item_delete = self.hashTab[i].pop(occurance_index)
+            print("l'element", item_delete, "est successivement supprimé")
