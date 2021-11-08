@@ -7,9 +7,9 @@ class hashTable:
     def hashage(self, key):
         return hash(key) % self.taille
 
-    def ajouterItem(self,nom,cin)
+    def ajouterItem(self,nom,cin):
         index=self.hachage(nom)
-        self.hashTable[index].append([nom,cin])
+        self.hashTab[index].append([nom,cin])
 
 
 
