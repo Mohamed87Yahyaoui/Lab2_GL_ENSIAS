@@ -29,7 +29,7 @@ class hashTable:
         else:
             print("no index found")
 
-            def chercherItem(self, nom):
+    def chercherItem(self, nom):
         index = self.HASH(nom)
         Ind = 0
         for k in range(len(self.hashTab[i])):
