@@ -27,7 +27,7 @@ class hashTable:
             for j in range(len(self.hashTab[i])):
                 print("Index : ", i, j, "\n"
                       "Nom:",self.hashTab[i][j][0], " \n"
-                      "Tel:", self.hashTab[i][j][1], "\n")
+                      "Tel:", self.hashTab[i][j][1], " \n")
         else:
             print("Aucun index trouvé")
 
