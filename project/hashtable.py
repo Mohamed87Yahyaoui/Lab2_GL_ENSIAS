@@ -12,10 +12,11 @@ class hashTable:
         self.hashTab[index].append([nom,cin])
 
     def afficherItem(self):
-        for index in range(self.taille):
-            if len(self.hashTable[index]) > 0:
-                print("--------------\nIndex : ", index, "\nNom:",
-                      self.hashTable[index][0][0], "\nTel:", self.hashTable[index][0][1], "\n--------------")
+        for i in range(self.taille):
+            if len(self.hashTab[i]) > 0:
+                print("Index : ", i, "\n"
+                      "Nom:",self.hashTab[i][0][0],"\n "
+                      "CIN:", self.hashTab[i][0][1],"\n")
 
     def afficherItemParIndex(self, i):
         if len(self.hashTable[i]) == 1:
