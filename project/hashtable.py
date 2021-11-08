@@ -29,7 +29,7 @@ class hashTable:
                       "Nom:",self.hashTab[i][j][0], "\n"
                       "Tel:", self.hashTab[i][j][1], "\n")
         else:
-            print("no index found")
+            print("Aucun index trouvé")
 
     def chercher_elem(self, nom):
         index = self.HASH(nom)
@@ -40,7 +40,7 @@ class hashTable:
             else:
                 Ind += 1
         if Ind == len(self.hashTab[index]):
-            return "L'item cherché est non trouve"
+            return "Element introuvable"
 
 
     def supprimerItem(self, nom):
