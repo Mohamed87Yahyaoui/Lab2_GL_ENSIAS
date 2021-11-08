@@ -15,7 +15,7 @@ class hashTable:
         for i in range(self.taille):
             if len(self.hashTab[i]) > 0:
                 print("Index : ", i, "\n"
-                      "Nom:",self.hashTab[i][0][0],"\n "
+                      "Nom:",self.hashTab[i][0][0],"\n"
                       "CIN:", self.hashTab[i][0][1],"\n")
 
     def afficherItemParIndex(self, i):
