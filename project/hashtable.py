@@ -51,6 +51,8 @@ class hashTable:
             occurance_index = self.chercher_elem(nom)[2]
             item_delete = self.hashTab[i].pop(occurance_index)
             print("l'element", item_delete, "est successivement supprimé")
+
+
     def nombreItems(self, i):
         if i in range(-self.taille, self.taille):
             print("l'index contient comme nombre d'item ", i,
