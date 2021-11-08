@@ -24,13 +24,14 @@ class hashTable:
                   self.hashTab[i][0][0], "\nTel:", self.hashTab[i][0][1], "\n")
         elif len(self.hashTab[i]) > 1:
             for j in range(len(self.hashTab[index])):
-                print("\n Index : ", i, j, "\nNom:",
-                      self.hashTab[i][j][0], "\nTel:", self.hashTab[i][j][1], "\n")
+                print("Index : ", i, j, "\n"
+                      "Nom:",self.hashTab[i][j][0], "\n"
+                      "CIN:", self.hashTab[i][j][1], "\n")
         else:
             print("no index found")
 
-            def chercherItem(self, nom):
-        index = self.HASH(nom)
+    def chercherItem(self, nom):
+        index = self.hashage(nom)
         Ind = 0
         for k in range(len(self.hashTab[i])):
             if nom == self.hashTab[index][k][0]:
@@ -38,4 +39,4 @@ class hashTable:
             else:
                 Ind += 1
         if Ind == len(self.hashTab[index]):
-            return "L'item cherché est non trouve"
+            return "L'item cherché est introuvable"
