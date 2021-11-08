@@ -1,16 +1,16 @@
 from hashtable import *
 
 def main():
-    Tableau = HashTable()
+    Tableau = hachage()
 
-    Tableau.ajouterItem("Ahmed", "J568452")
-    Tableau.ajouterItem("Sara", "A5642154")
-    Tableau.ajouterItem("Brahim", "D451234")
+    Tableau.ajout_Elem("Ahmed", "J568452")
+    Tableau.ajout_Elem("Sara", "A5642154")
+    Tableau.ajout_Elem("Brahim", "D451234")
 
-    Tableau.afficherItem()
-    Tableau.afficherItemParIndex(50)
+    Tableau.afficher_Elem()
+    Tableau.afficher_Elem_Index(50)
 
-    print(Tableau.chercherItem("Ahmed")) # (Item; index; occurence)
+    print(Tableau.chercher_elem("Ahmed")) # (Item; index; occurence)
 
     Tableau.supprimer_elem("Ahmed")
     print(Tableau.chercher_elem("Ahmed")) # L'item cherché est non trouve
