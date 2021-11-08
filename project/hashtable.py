@@ -59,5 +59,5 @@ class hashTable:
                   " est: ", len(self.hashTab[i]))
             return len(self.hashTab[i])
         else:
-            print("index out of range")
+            print("index out of range ")
             return 0
