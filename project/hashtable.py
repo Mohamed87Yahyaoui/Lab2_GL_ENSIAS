@@ -17,3 +17,14 @@ class hashTable:
                 print("Index : ", i, "\n"
                       "Nom:",self.hashTab[i][0][0],"\n "
                       "CIN:", self.hashTab[i][0][1],"\n")
+
+    def chercherElem(self, nom):
+        index = self.HASH(nom)
+        Ind = 0
+        for i in range(len(self.hashTable[index])):
+            if nom == self.hashTable[index][i][0]:
+                return (self.hashTable[index][i], index, i)
+            else:
+                Ind += 1
+        if Ind == len(self.hashTable[index]):
+            return "L'item cherché est non trouve"
