@@ -4,21 +4,21 @@ class hashTable:
         self.taille = taille
         self.hashTab = [[] for i in range(self.taille)]
 
-    def hashage(self, key):
+    def hachage(self, key):
         return hash(key) % self.taille
 
-    def ajouterElem(self,nom,cin):
+    def ajout_Elem(self,nom,cin):
         index=self.hachage(nom)
         self.hashTab[index].append([nom,cin])
 
-    def afficherElem(self):
+    def afficher_Elem(self):
         for i in range(self.taille):
             if len(self.hashTab[i]) > 0:
                 print("Index : ", i, "\n"
                       "Nom:",self.hashTab[i][0][0],"\n"
                       "CIN:", self.hashTab[i][0][1],"\n")
 
-    def afficherElemParIndex(self, i):
+    def afficher_Elem_Index(self, i):
         if len(self.hashTab[i]) == 1:
             print("\nIndex : ", i, "\nNom:",
                   self.hashTab[i][0][0], "\nTel:", self.hashTab[i][0][1], "\n")
@@ -29,7 +29,7 @@ class hashTable:
         else:
             print("no index found")
 
-    def chercherElem(self, nom):
+    def chercher_elem(self, nom):
         index = self.HASH(nom)
         Ind = 0
         for k in range(len(self.hashTab[i])):
@@ -39,8 +39,8 @@ class hashTable:
                 Ind += 1
         if Ind == len(self.hashTab[index]):
             return "L'item cherché est non trouve"
-        
-        
+
+
     def supprimerItem(self, nom):
         if self.chercherItem(nom) == "L'élement cherché n'est pas trouvé":
             print("Element n'est pas existant")
