@@ -11,5 +11,9 @@ class hashTable:
         index=self.hachage(nom)
         self.hashTab[index].append([nom,cin])
 
-
+    def afficherItem(self):
+        for index in range(self.taille):
+            if len(self.hashTable[index]) > 0:
+                print("--------------\nIndex : ", index, "\nNom:",
+                      self.hashTable[index][0][0], "\nTel:", self.hashTable[index][0][1], "\n--------------")
 
